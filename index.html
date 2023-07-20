@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
+</head>
+
+<body>
+    <main>
+        <form id="calc-form">
+            <header class="top">
+                <label class="dark-mode-btn">
+                    <input type="checkbox" id="dark-mode-btn" class="dark-mode">
+                    <span class="slider round"></span>
+
+                </label>
+                <input class="screen" id="screen" type="text" disabled value="0" />
+            </header>
+
+            <div class="grid-container">
+                <button data-clear class="grid-container--btn" id="c">C</button>
+                <button data-type="operator" class="grid-container--btn" id="moreless" value="invert">±</button>
+                <button data-type="operator" class="grid-container--btn" id="percentage" value="%">%</button>
+                <button data-type="operator" class="grid-container--btn" id="slash" value="/">/</button>
+                <button data-type="number" class="grid-container--btn" id="n7" value="7">7</button>
+                <button data-type="number" class="grid-container--btn" id="n8" value="8">8</button>
+                <button data-type="number" class="grid-container--btn" id="n9" value="9">9</button>
+                <button data-type="operator" class="grid-container--btn" id="X" value="*">x</button>
+                <button data-type="number" class="grid-container--btn" id="n4" value="4">4</button>
+                <button data-type="number" class="grid-container--btn" id="n5" value="5">5</button>
+                <button data-type="number" class="grid-container--btn" id="n6" value="6">6</button>
+                <button data-type="operator" class="grid-container--btn" id="minus" value="-">-</button>
+                <button data-type="number" class="grid-container--btn" id="n1" value="1">1</button>
+                <button data-type="number" class="grid-container--btn" id="n2" value="2">2</button>
+                <button data-type="number" class="grid-container--btn" id="n3" value="3">3</button>
+                <button data-type="operator" class="grid-container--btn" id="add" value="+">+</button>
+                <button data-type="number" class="grid-container--btn" id="n0" value="0">0</button>
+                <button data-type="number" class="grid-container--btn" id="dot" value=".">.</button>
+                <button data-type="operator" class="grid-container--btn" id="equal" value="equal">=</button>
+            </div>
+        </form>
+
+    </main>
+    <section class="log">
+        <ul class="log-container">
+            <li class="first-log">- Log -</li>
+        </ul>
+    </section>
+
+</body>
+
+</html>

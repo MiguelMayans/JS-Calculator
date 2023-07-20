@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&display=swap');
+
+/* Style Reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+/* Image Reset*/
+img,
+picture,
+video,
+iframe,
+figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+/* Anchor Reset */
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+p a {
+    display: inline;
+}
+
+/* Lists Reset */
+li {
+    list-style-type: none;
+}
+
+/* Smooth Scroll  */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Text Reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Form and fonts Reset*/
+form,
+input,
+textarea,
+select,
+button,
+label {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    background-color: transparent;
+    color: inherit;
+    display: block;
+}
+
+/* Table Reset */
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* SVG Reset*/
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+/* Calculator Style */
+
+
+
+body {
+    background: linear-gradient(to right, aquamarine, #ccff00);
+    margin-top: 3em;
+    font-family: 'Martian Mono', monospace;
+    width: 500px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+/* Dark Mode Button */
+.dark-mode-btn {
+    position: relative;
+    display: inline-block;
+    margin-left: 260px;
+    width: 40px;
+    height: 22px;
+}
+
+.dark-mode-btn input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    display: flex;
+    cursor: pointer;
+    width: 45px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: orangered;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: 2px solid black;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: rgb(62, 62, 62);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px rgb(62, 62, 62);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/* Calculator Screen */
+.screen {
+    background-color: aliceblue;
+    width: 310px;
+    height: 75px;
+    border: 3px solid black;
+    text-align: right;
+    font-size: 2.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-right: 0.3em;
+
+}
+
+main {
+
+    background-color: darkcyan;
+    display: flex;
+    width: 360px;
+    height: 590px;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    border-radius: 4%;
+    border: 5px solid black;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    margin-top: 100px;
+    margin-left: 120px;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.4em;
+
+}
+
+.grid-container--btn {
+
+    background-color: azure;
+    border: 3px solid black;
+    size: 4rem;
+    font-size: 2rem;
+    padding: 0.5em;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    border-radius: 10%;
+
+}
+
+.grid-container--btn:hover {
+
+    background-color: rgb(192, 249, 249);
+}
+
+#equal {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-color: orangered;
+    border-radius: 1%;
+
+}
+
+#c {
+    border-radius: 50%;
+}
+
+.log {
+    position: fixed;
+    width: 250px;
+    height: 570px;
+    background: white;
+    right: 250px;
+    bottom: 220px;
+    border: 3px solid black;
+    text-align: center;
+    border-radius: 2%;
+    margin-bottom: 0.5em;
+
+}
+
+.log-container li {
+    margin-top: 0.4em;
+    margin-bottom: 0.5em;
+
+}
+
+.log-container li:nth-child(odd) {
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5em;
+}
+
+.first-log {
+    border-bottom: 3px solid black;
+    padding: 1em;
+
+}
+
+/* Dark Mode */
+
+.dark-mode {
+    background: rgb(62, 62, 62);
+    background-color: rgb(62, 62, 62);
+    color: white;
+    border-color: white;
+
+}
